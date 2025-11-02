@@ -73,3 +73,9 @@ It demonstrates **NumPy for computation** and **Matplotlib for visualization**, 
 Learning **Data Science** one NumPy array at a time ⚡
 
 ---
+
+🪪 License
+
+This project is licensed under the MIT License — feel free to use and modify it.
+
+---
