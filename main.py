@@ -2,6 +2,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
+# ---------- Data Generation (Dummy Example for 30 days, 24 hours each) ----------
+np.random.seed(0)
+data = np.random.uniform(1.5, 4.5, size=(30, 24))  # 30 days × 24 hours
+
+# ---------- Function Definitions ----------
 def daily_consumption(data):
     """Return total energy per day (shape: 30,)"""
     return np.sum(data, axis=1)
@@ -28,8 +33,7 @@ def predict_next_day_usage(data):
     daily_totals = np.sum(last_7_days, axis=1)
     return np.mean(daily_totals)
 
-# ---------- Visualization through Plotting Section ----------
-
+# ---------- Visualization Functions ----------
 def plot_daily_usage(daily_usage, save_path="outputs/daily_usage_plot.png"):
     """Plot daily total consumption."""
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
@@ -56,3 +60,18 @@ def plot_peak_hours(day_index, day_data, save_path="outputs/peak_hours_day1.png"
     plt.legend()
     plt.savefig(save_path)
     plt.close()
+
+# ---------- Running the Analysis ----------
+daily_usage = daily_consumption(data)
+total_monthly = monthly_consumption(data)
+peak_hours = find_peak_hours(data)
+prediction = predict_next_day_usage(data)
+
+print("Total monthly consumption:", total_monthly)
+print("Predicted next day total usage:", prediction)
+print("Peak hours for Day 1:", peak_hours[1])
+
+# ---------- Plotting ----------
+plot_daily_usage(daily_usage)
+plot_peak_hours(1, data[0])
+
