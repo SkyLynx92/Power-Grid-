@@ -4,9 +4,6 @@
 
 ## 🧮 Energy Consumption Analysis using NumPy & Matplotlib
 
-A beginner-friendly Python project that **analyzes and visualizes daily household energy usage** over 30 days.
-It demonstrates **NumPy for computation** and **Matplotlib for visualization**, making it perfect for **Data Science learners**.
-
 ---
 
 ## 🚀 **Features**
