@@ -36,7 +36,7 @@ It demonstrates **NumPy for computation** and **Matplotlib for visualization**, 
 1. **Clone this repository**
 
    ```bash
-   git clone https://github.com/SkyLynx92/power-grid.git
+   git clone https://github.com/SkyLynx92/power-grid-.git
    cd energy-consumption-analysis
    ```
 
